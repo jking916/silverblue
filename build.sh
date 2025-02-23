@@ -22,6 +22,7 @@ dnf5 install -y \
   python3-pip \
   syncthing \
   tailscale \
+  vivaldi \
   zsh
 
 systemctl enable podman.socket
