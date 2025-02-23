@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+mkdir -p /var/opt
+
 dnf5 copr enable -y dsommers/openvpn3
 dnf5 copr enable -y grzegorz-gutowski/openvpn3-indicator
 
