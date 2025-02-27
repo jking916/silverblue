@@ -40,4 +40,3 @@ mkdir -p /var/lib/openvpn3/configs
 chown -R openvpn:openvpn /var/lib/openvpn3/configs
 chmod 700 /var/lib/openvpn3/configs
 setsebool -P dbus_access_tuntap_device=1
-openvpn3-admin init-config --write-configs
