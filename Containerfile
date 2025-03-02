@@ -1,8 +1,28 @@
 FROM ghcr.io/ublue-os/silverblue-main:41
 
-COPY files/yum.repos.d/ /etc/yum.repos.d/
-COPY build.sh /tmp/build.sh
+COPY files/ /
 
-RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
-    ostree container commit
+RUN dnf5 copr enable -y dsommers/openvpn3 \
+    && dnf5 copr enable -y grzegorz-gutowski/openvpn3-indicator \
+    && dnf5 install -y \
+        code \
+        fira-code-fonts \
+        gcc \
+        gnome-shell-extension-appindicator \
+        gnome-shell-extension-caffeine \
+        gnome-shell-extension-dash-to-dock \
+        keepassxc \
+        make \
+        openvpn3 \
+        openvpn3-indicator \
+        podman-compose \
+        podman-docker \
+        powertop \
+        python3-pip \
+        syncthing \
+        tailscale \
+        zsh
+
+RUN systemctl enable podman.socket
+
+RUN ostree container commit
