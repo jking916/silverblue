@@ -23,6 +23,7 @@ RUN dnf5 copr enable -y dsommers/openvpn3 \
         tailscale \
         zsh
 
-RUN systemctl enable podman.socket
+RUN rm /etc/xdg/autostart/openvpn3-indicator.desktop \
+    && systemctl enable podman.socket
 
 RUN ostree container commit
