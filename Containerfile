@@ -8,6 +8,7 @@ RUN dnf5 copr enable -y dsommers/openvpn3 \
         code \
         fira-code-fonts \
         gcc \
+        git \
         gnome-shell-extension-appindicator \
         gnome-shell-extension-caffeine \
         gnome-shell-extension-dash-to-dock \
@@ -18,6 +19,7 @@ RUN dnf5 copr enable -y dsommers/openvpn3 \
         podman-compose \
         podman-docker \
         powertop \
+        python3-cryptography \
         python3-pip \
         syncthing \
         tailscale \
