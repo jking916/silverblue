@@ -14,6 +14,7 @@ RUN dnf5 copr enable -y dsommers/openvpn3 \
         gnome-shell-extension-dash-to-dock \
         keepassxc \
         make \
+        nordvpn \
         openvpn3 \
         openvpn3-indicator \
         podman-compose \
