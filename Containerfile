@@ -20,7 +20,6 @@ RUN dnf5 copr enable -y dsommers/openvpn3 \
         podman-compose \
         podman-docker \
         powertop \
-        python3-cryptography \
         python3-pip \
         syncthing \
         tailscale \
