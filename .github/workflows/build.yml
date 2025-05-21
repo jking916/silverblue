@@ -1,8 +1,6 @@
 ---
 name: Build Custom Image
 on:
-  schedule:
-    - cron: "05 10 * * *" # 10:05am UTC everyday
   push:
     branches:
       - main
